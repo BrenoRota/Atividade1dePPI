@@ -16,7 +16,7 @@ function geraBrenorTabelaTabuada(tabuada, sequencia) {
     return resultado;
 }
 
-app.get("/breno", (requisicao, resposta) => {
+app.get("/", (requisicao, resposta) => {
     const tabuada = parseInt(requisicao.query.tabuada) || 1;
     const sequencia = parseInt(requisicao.query.sequencia) || 10;
     const paginaHTML = `
