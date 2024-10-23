@@ -1,10 +1,10 @@
 import express from 'express';
 
-const host = "0.0.0.0";
+const host = "localhost";
 const port = 3000;
 const app = express();
 
-function gerarTabelaTabuada(tabuada, sequencia) {
+function geraBrenorTabelaTabuada(tabuada, sequencia) {
     let resultado = `<h1>Tabuada do ${tabuada}</h1>`;
     resultado += '<ul>';
 
@@ -31,7 +31,7 @@ app.get("/breno", (requisicao, resposta) => {
             </style>
         </head>
         <body>
-            ${gerarTabelaTabuada(tabuada, sequencia)}
+            ${geraBrenorTabelaTabuada(tabuada, sequencia)}
         </body>
         </html>
     `;
